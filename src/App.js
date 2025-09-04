@@ -1,6 +1,5 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+// import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
