@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael — Portfolio</title>
+  <meta name="description" content="Hey there! I'm Michael, a software engineer who loves building cool stuff. Check out my projects and let's connect!">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header container">
+    <div class="identity">
+      <h1>Michael</h1>
+      <p class="subtitle">Software Engineer & Problem Solver</p>
+    </div>
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Let's Chat</a>
+      <button id="themeToggle" aria-label="Toggle theme">☀️</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="container">
+      <div class="about">
+        <img src="assets/avatar.jpg" alt="Portrait of Michael" class="avatar" onerror="this.style.display='none'">
+        <div>
+          <h2>Hey there! 👋</h2>
+          <p>I'm a software engineer who gets excited about solving real-world problems with clean, efficient code. When I'm not coding, you'll probably find me exploring new technologies, contributing to open source, or just enjoying a good cup of coffee.</p>
+          <p>I believe in writing code that not only works but also makes other developers smile when they read it. Let's build something awesome together!</p>
+          <p>
+            <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+            · <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a>
+            · <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Stuff I've Built 🚀</h2>
+      <div class="projects-grid">
+        <article class="card">
+          <h3>Project Name</h3>
+          <p class="muted">A cool project that solves a real problem and makes people's lives easier. Built with love and lots of coffee.</p>
+          <ul class="meta">
+            <li><strong>Tech Stack:</strong> Java, Spring Boot, React</li>
+            <li><strong>What I Did:</strong> Designed the architecture, built the backend, and created a smooth user experience</li>
+            <li><strong>Cool Result:</strong> Helped users save 30% of their time on daily tasks</li>
+          </ul>
+          <p>
+            <a href="#" target="_blank" rel="noopener">Live Demo</a>
+            · <a href="#" target="_blank" rel="noopener">Source Code</a>
+            · <a href="#" target="_blank" rel="noopener">Blog Post</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Another Awesome Project</h3>
+          <p class="muted">This one was a fun challenge that pushed my skills and taught me a ton about distributed systems.</p>
+          <ul class="meta">
+            <li><strong>Tech Stack:</strong> Kotlin, Ktor, Postgres</li>
+            <li><strong>What I Did:</strong> Built the core API from scratch and optimized database queries</li>
+            <li><strong>Cool Result:</strong> Doubled the system's performance under heavy load</li>
+          </ul>
+          <p>
+            <a href="#" target="_blank" rel="noopener">Live Demo</a>
+            · <a href="#" target="_blank" rel="noopener">Source Code</a>
+            · <a href="#" target="_blank" rel="noopener">Blog Post</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container">
+      <h2>What I'm Good At 💪</h2>
+      <div class="skills">
+        <div>
+          <h3>Rock Solid</h3>
+          <ul>
+            <li>Java & Spring Framework</li>
+            <li>SQL & Database Design</li>
+            <li>Git & CI/CD Pipelines</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Getting Better</h3>
+          <ul>
+            <li>JavaScript & React</li>
+            <li>Docker & Containerization</li>
+            <li>Testing with JUnit & Jest</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Learning Now</h3>
+          <ul>
+            <li>Cloud platforms (AWS/GCP)</li>
+            <li>Distributed systems</li>
+            <li>System design patterns</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Let's Connect! 🤝</h2>
+      <p>I'm always interested in hearing about new opportunities, interesting projects, or just chatting about tech. Don't hesitate to reach out!</p>
+      <p>Email: <a href="mailto:ademejimichael3@gmail.com">ademejimichael3@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Michael. Made with ☕ and ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
+
+
