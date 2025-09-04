@@ -52,22 +52,7 @@ A modern, responsive portfolio built with React, featuring smooth animations, da
 4. **Open your browser**
    Navigate to `http://localhost:3000`
 
-## 📁 Project Structure
-
-```
-src/
-├── components/          # React components
-│   ├── Header.js       # Navigation and theme toggle
-│   ├── Hero.js         # Hero section with CTA
-│   ├── About.js        # About section
-│   ├── Projects.js     # Projects showcase
-│   ├── Skills.js       # Skills with progress bars
-│   ├── Contact.js      # Contact information
-│   └── Footer.js       # Footer with social links
-├── App.js              # Main app component
-├── index.js            # React entry point
-└── index.css           # Global styles and Tailwind imports
-```
+ 
 
 ## 🎨 Customization
 
@@ -81,9 +66,7 @@ Update the content in each component file to match your information:
 - Skills and proficiency levels in `Skills.js`
 - Contact information in `Contact.js`
 
-### Styling
-Modify the Tailwind classes in each component to adjust the design to your preferences.
-
+ 
 ## 🚀 Deployment
 
 ### Build for Production
@@ -131,11 +114,7 @@ Built with Framer Motion for:
 
 Feel free to submit issues and enhancement requests!
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
+ 
 
 Made with ☕ and ❤️ by Michael
 
