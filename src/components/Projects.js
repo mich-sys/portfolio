@@ -11,7 +11,7 @@ const Projects = () => {
       role: "Architected the multi-cloud topology, implemented the Node.js services, and automated analytics pipelines and alerting.",
       outcome: "Delivered an always-on media workflow with serverless analytics and proactive monitoring for photo ingestion events.",
       links: {
-        live: "https://freephotobox.me",
+        live: "https://www.freephotobox.me",
         code: "https://medium.com/@ademejimichael34/freephotobox-full-architecture-deep-dive-6e878aeb4d22",
         writeup: "https://medium.com/@ademejimichael34/freephotobox-full-architecture-deep-dive-6e878aeb4d22"
       },
@@ -85,7 +85,7 @@ const Projects = () => {
                   <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-white group-hover:text-primary-600 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                     {project.description}
                   </p>
                 </div>
@@ -108,14 +108,14 @@ const Projects = () => {
                   
                   <div>
                     <h4 className="font-semibold text-gray-800 dark:text-white mb-2">What I Did</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm">
                       {project.role}
                     </p>
                   </div>
                   
                   <div>
                     <h4 className="font-semibold text-gray-800 dark:text-white mb-2"> Result</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm">
                       {project.outcome}
                     </p>
                   </div>

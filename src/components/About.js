@@ -90,7 +90,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.8 }}
-                  className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+                  className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
                 >
                   I'm a software engineer who is excited about solving real-world problems with clean, efficient code. When I'm not coding, you'll probably find me exploring new technologies, contributing to open source, or just enjoying a good cup of coffee.
                 </motion.p>
@@ -100,7 +100,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 1.0 }}
-                  className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+                  className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
                 >
                   I believe in writing code that not only works but also makes other developers smile when they read it. Let's build something awesome together!
                 </motion.p>
