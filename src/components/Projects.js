@@ -5,6 +5,19 @@ import { ExternalLink, Github, FileText, ArrowUpRight } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
+      title: "FreePhotoBox",
+      description: "A cloud-native photo management platform combining a React experience with automated analytics and observability across Azure and AWS.",
+      stack: ["React", "Node.js", "Azure", "AWS S3", "AWS Lambda", "DynamoDB", "CloudWatch"],
+      role: "Architected the multi-cloud topology, implemented the Node.js services, and automated analytics pipelines and alerting.",
+      outcome: "Delivered an always-on media workflow with serverless analytics and proactive monitoring for photo ingestion events.",
+      links: {
+        live: "https://freephotobox.me",
+        code: "https://medium.com/@ademejimichael34/freephotobox-full-architecture-deep-dive-6e878aeb4d22",
+        writeup: "https://medium.com/@ademejimichael34/freephotobox-full-architecture-deep-dive-6e878aeb4d22"
+      },
+      color: "from-amber-500 to-orange-600"
+    },
+    {
       title: "Banking Web Application",
       description: "A banking web design that allows users to view their accounts and transactions.",
       stack: ["Javascript", "React", "Tailwind CSS"],
