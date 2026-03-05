@@ -16,13 +16,12 @@ const Projects = () => {
       featured: true
     },
     {
-      title: "Banking Dashboard",
-      description: "Modern banking interface allowing users to view accounts, transactions, and manage their finances with a clean, intuitive design.",
-      stack: ["React", "JavaScript", "Tailwind CSS"],
-      impact: "Built responsive dashboard with smooth interactions and optimized performance.",
+      title: "Library Management System",
+      description: "Full-stack application with authentication, role-based authorization, and book management. Features user registration, secure login with JWT tokens, and admin privileges for managing users and books.",
+      stack: ["Node.js", "Express", "PostgreSQL", "Sequelize", "JWT", "bcrypt"],
+      impact: "Built secure full-stack application with role-based access control, allowing users to manage book collections with search functionality and admin oversight.",
       links: {
-        live: "https://bank-web-app.netlify.app/",
-        code: "https://github.com/mich-sys/bank-web-app"
+        code: "https://github.com/mich-sys/lib-sql"
       },
       featured: false
     }
