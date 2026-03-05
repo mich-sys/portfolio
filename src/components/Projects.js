@@ -1,204 +1,155 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, FileText, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
       title: "FreePhotoBox",
-      description: "A cloud-native photo management platform combining a React experience with automated analytics and observability across Azure and AWS.",
-      stack: ["React", "Node.js", "Azure", "AWS S3", "AWS Lambda", "DynamoDB", "CloudWatch"],
-      role: "Architected the multi-cloud topology, implemented the Node.js services, and automated analytics pipelines and alerting.",
-      outcome: "Delivered an always-on media workflow with serverless analytics and proactive monitoring for photo ingestion events.",
+      description: "Cloud-native photo management platform with automated analytics and observability across Azure and AWS. Features serverless architecture with real-time monitoring.",
+      stack: ["React", "Node.js", "Azure", "AWS Lambda", "DynamoDB"],
+      impact: "Delivered always-on media workflow with serverless analytics and proactive monitoring for photo ingestion events.",
       links: {
         live: "https://www.freephotobox.me",
-        code: "https://medium.com/@ademejimichael34/freephotobox-full-architecture-deep-dive-6e878aeb4d22",
-        writeup: "https://medium.com/@ademejimichael34/freephotobox-full-architecture-deep-dive-6e878aeb4d22"
+        article: "https://medium.com/@ademejimichael34/freephotobox-full-architecture-deep-dive-6e878aeb4d22"
       },
-      color: "from-amber-500 to-orange-600"
+      featured: true
     },
     {
-      title: "Banking Web Application",
-      description: "A banking web design that allows users to view their accounts and transactions.",
-      stack: ["Javascript", "React", "Tailwind CSS"],
-      role: "Created a smooth user experience",
-      outcome: "Understand the basics of React and how to use it to build a web application",
+      title: "Banking Dashboard",
+      description: "Modern banking interface allowing users to view accounts, transactions, and manage their finances with a clean, intuitive design.",
+      stack: ["React", "JavaScript", "Tailwind CSS"],
+      impact: "Built responsive dashboard with smooth interactions and optimized performance.",
       links: {
         live: "https://bank-web-app.netlify.app/",
-        code: "https://github.com/mich-sys/bank-web-app",
-        writeup: "#"
+        code: "https://github.com/mich-sys/bank-web-app"
       },
-      color: "from-blue-500 to-cyan-600"
-    },
-    {
-      title: "Tic Tac Toe ",
-      description: "This one was a fun challenge that pushed my skills and taught me the basics and concepts of React.",
-      stack: ["React", "Tailwind CSS"],
-      role: "Built the game from scratch and optimized the game logic",
-      outcome: "The game is a fun and challenging way to test your React skills",
-      links: {
-        live: "https://ticky-tackies.netlify.app/",
-        code: "https://github.com/mich-sys/tic-tac-toe",
-        writeup: "#"
-      },
-      color: "from-purple-500 to-pink-600"
+      featured: false
     }
   ];
 
   return (
-    <section id="projects" className="section-padding">
-      <div className="container-width">
-        {/* Section Header */}
+    <section id="projects" className="py-24 md:py-32 bg-stone-100/50 dark:bg-stone-900/50">
+      <div className="max-w-5xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="space-y-4 mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Stuff I've Built <span className="gradient-text">🚀</span>
+          <span className="text-sm font-medium text-stone-500 dark:text-stone-500 uppercase tracking-wider">
+            Selected Work
+          </span>
+          <h2 className="text-3xl md:text-4xl font-semibold text-stone-900 dark:text-white">
+            Projects I've built
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some projects I'm proud of. Each one taught me something new and helped me grow as a developer.
+          <p className="text-lg text-stone-600 dark:text-stone-400 max-w-2xl">
+            A selection of projects that showcase my experience in full-stack development and cloud architecture.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto rounded-full mt-6"></div>
         </motion.div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Projects List */}
+        <div className="space-y-8">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.article
               key={project.title}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-white dark:bg-dark-800 rounded-3xl shadow-xl border border-gray-100 dark:border-dark-700 p-8 hover:shadow-2xl transition-all duration-500 overflow-hidden relative">
-                {/* Top Accent Bar */}
-                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${project.color}`}></div>
-                
-                {/* Project Header */}
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-white group-hover:text-primary-600 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    {project.description}
-                  </p>
-                </div>
-
-                {/* Project Details */}
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Tech Stack</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.stack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-gray-100 dark:bg-dark-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
+              <div className={`p-8 md:p-10 rounded-2xl border transition-all duration-300 ${
+                project.featured 
+                  ? 'bg-white dark:bg-stone-800/50 border-stone-200 dark:border-stone-700 hover:border-stone-300 dark:hover:border-stone-600' 
+                  : 'bg-white dark:bg-stone-800/30 border-stone-200 dark:border-stone-800 hover:border-stone-300 dark:hover:border-stone-700'
+              }`}>
+                <div className="space-y-6">
+                  {/* Header */}
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                    <div>
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="text-xl md:text-2xl font-semibold text-stone-900 dark:text-white">
+                          {project.title}
+                        </h3>
+                        {project.featured && (
+                          <span className="px-2 py-0.5 text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded">
+                            Featured
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
+                        {project.description}
+                      </p>
+                    </div>
+                    
+                    {/* Links */}
+                    <div className="flex items-center gap-3 shrink-0">
+                      {project.links.code && (
+                        <a
+                          href={project.links.code}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 text-stone-400 hover:text-stone-900 dark:text-stone-500 dark:hover:text-white transition-colors"
+                          aria-label="View source code"
                         >
-                          {tech}
-                        </span>
-                      ))}
+                          <Github size={20} strokeWidth={1.5} />
+                        </a>
+                      )}
+                      {project.links.live && (
+                        <a
+                          href={project.links.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-stone-700 dark:text-stone-300 bg-stone-100 dark:bg-stone-700/50 hover:bg-stone-200 dark:hover:bg-stone-700 rounded-lg transition-colors"
+                        >
+                          Visit
+                          <ArrowUpRight size={14} />
+                        </a>
+                      )}
                     </div>
                   </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-gray-800 dark:text-white mb-2">What I Did</h4>
-                    <p className="text-gray-700 dark:text-gray-300 text-sm">
-                      {project.role}
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-gray-800 dark:text-white mb-2"> Result</h4>
-                    <p className="text-gray-700 dark:text-gray-300 text-sm">
-                      {project.outcome}
-                    </p>
+
+                  {/* Impact */}
+                  <p className="text-sm text-stone-500 dark:text-stone-500 border-l-2 border-stone-200 dark:border-stone-700 pl-4">
+                    {project.impact}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-sm text-stone-600 dark:text-stone-400 bg-stone-100 dark:bg-stone-800 rounded-md"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
-
-                {/* Project Links */}
-                <div className="flex flex-wrap gap-3">
-                  <motion.a
-                    href={project.links.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center space-x-2 px-4 py-2 bg-primary-500 text-white rounded-full text-sm font-medium hover:bg-primary-600 transition-colors duration-300"
-                  >
-                    <ExternalLink size={16} />
-                    <span>Live Demo</span>
-                  </motion.a>
-                  
-                  <motion.a
-                    href={project.links.code}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center space-x-2 px-4 py-2 bg-gray-100 dark:bg-dark-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-600 transition-colors duration-300"
-                  >
-                    <Github size={16} />
-                    <span>Source Code</span>
-                  </motion.a>
-                  
-                  <motion.a
-                    href={project.links.writeup}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center space-x-2 px-4 py-2 bg-gray-100 dark:bg-dark-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-600 transition-colors duration-300"
-                  >
-                    <FileText size={16} />
-                    <span>Blog Post</span>
-                  </motion.a>
-                </div>
-
-                {/* Hover Arrow */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileHover={{ opacity: 1, x: 0 }}
-                  className="absolute top-6 right-6 text-primary-500 opacity-0 group-hover:opacity-100 transition-all duration-300"
-                >
-                  <ArrowUpRight size={24} />
-                </motion.div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* More Projects Link */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-16"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-12 text-center"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-2xl p-8 border border-primary-200 dark:border-primary-800">
-            <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
-              Have a Project in Mind? 💡
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              I'm always interested in hearing about new opportunities and interesting projects. 
-              Let's discuss how we can work together to bring your ideas to life!
-            </p>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <span>Let's Talk</span>
-              <ArrowUpRight size={20} />
-            </motion.a>
-          </div>
+          <a
+            href="https://github.com/mich-sys"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white transition-colors"
+          >
+            View more on GitHub
+            <ArrowUpRight size={16} />
+          </a>
         </motion.div>
       </div>
     </section>
